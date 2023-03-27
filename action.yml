@@ -1,5 +1,5 @@
 # action.yml
-name: 'Run Lighthouse CI on Shopify theme on Desktop Mode'
+name: 'Run Lighthouse CI on Shopify theme for Prismfly'
 branding:
   icon: shopping-bag
   colour: purple
