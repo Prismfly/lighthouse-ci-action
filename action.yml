@@ -2,7 +2,7 @@
 name: 'Run Lighthouse CI on Shopify theme on Desktop Mode'
 branding:
   icon: shopping-bag
-  colour: green
+  colour: purple
 description: 'Run Lighthouse CI on Shopify themes directly from GitHub'
 inputs:
   access_token:
