@@ -204,6 +204,7 @@ ci:
       - "$host/products/$product_handle$query_string"
       - "$host/collections/$collection_handle$query_string"
     puppeteerScript: './setPreviewCookies.js'
+    psiStrategy: desktop
     puppeteerLaunchOptions:
       args:
         - "--no-sandbox"
