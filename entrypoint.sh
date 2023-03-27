@@ -199,12 +199,13 @@ min_score_accessibility="${LHCI_MIN_SCORE_ACCESSIBILITY:-0.9}"
 cat <<- EOF > lighthouserc.yml
 ci:
   collect:
+    settings:
+      preset: desktop
     url:
       - "$host/$query_string"
       - "$host/products/$product_handle$query_string"
       - "$host/collections/$collection_handle$query_string"
     puppeteerScript: './setPreviewCookies.js'
-    psiStrategy: desktop
     puppeteerLaunchOptions:
       args:
         - "--no-sandbox"
