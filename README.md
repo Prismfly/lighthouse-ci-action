@@ -19,7 +19,7 @@ jobs:
     name: Lighthouse
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Lighthouse
         uses: shopify/lighthouse-ci-action@v1
         with:
@@ -42,7 +42,7 @@ Authentication is done with [Custom App access tokens](https://shopify.dev/apps/
 4. Click `Save`.
 5. From the `API credentials` tab, install the app.
 6. Take note of the `Admin API access token`.
-7. Add the following to your repository's [GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-an-environment):
+7. Add the following to your repository's [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository):
    - `SHOP_ACCESS_TOKEN`: the Admin API access token
    - `SHOP_STORE`: Shopify store `<store>.myshopify.com` URL
 
@@ -66,10 +66,3 @@ For the GitHub Status Checks on PR. One of the two arguments is required:
 * `lhci_github_token` - (optional) GitHub personal access token
 
 For more details on the implications of choosing one over the other, refer to the [Lighthouse CI Getting Started Page](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md#github-status-checks)
-
-### Deprecated authentication configuration
-
-The following were used to authenticate with private apps.
-
-* `app_id` - (deprecated) Shopify store private app ID.
-* `app_password` - (deprecated) Shopify store private app password.
